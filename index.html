@@ -210,14 +210,88 @@
             </div>
         </div>
     </div>
-    <div class="fun-quote my-5 container">
-        <div class="box">
+    <div class="fun-quote my-5  container">
+        <div class="box p-5">
+            <div class="spinner-border" id="fun-loading" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
             <h3 id="fun-q"></h3>
             <h5 id="fun-a"></h5>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact container my-5">
+        <div class="contact-form row">
+            <div class="col-md-6 p-5">
+                <form>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="first_name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first_name" aria-describedby="fNameHelp">
+                                <div id="fNameHelp" class="form-text">Your First Name</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="last_name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" aria-describedby="lNameHelp">
+                                <div id="lNameHelp" class="form-text">Your Last Name</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="EmailHelp">
+                            <div id="EmailHelp" class="form-text">Your Email</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message_name" class="form-label">Message</label>
+                            <textarea class="form-control" rows="6" cols="50"></textarea>
+                        </div>
+                    </div>
 
+                    <button type="submit" class="normal-btn d-flex text-center">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6 p-5 ">
+                <img src="image/contact-me.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="image" viewBox="0 0 1440 320">
+            <path fill="#273036" fill-opacity="1"
+                d="M0,192L24,176C48,160,96,128,144,144C192,160,240,224,288,229.3C336,235,384,181,432,165.3C480,149,528,171,576,192C624,213,672,235,720,218.7C768,203,816,149,864,138.7C912,128,960,160,1008,160C1056,160,1104,128,1152,117.3C1200,107,1248,117,1296,149.3C1344,181,1392,235,1416,261.3L1440,288L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
+            </path>
+        </svg>
+        <div class="container text-center text-white">
+            <br>
+            <h1>Eeza Bin Zakariyya</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perspiciatis aperiam perferendis labore,
+                dolorum similique facilis sint alias rerum placeat iste dolore, qui atque tempora, doloremque nisi
+                laborum unde temporibus?</p>
+            <br>
+        </div>
+        <div class="container">
+            <div class="row text-center text-light">
+                <div class="col-md-4">
+                    <h4>Social Media</h4>
+                    <p>@__ee._za__</p>
+                    <p>@testaccount</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Phone</h4>
+                    <p>+918921393254</p>
+                    <p>+919852412548</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Location</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea quis natus unde eligendi,
+                        impedit enim reiciendis.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -225,19 +299,19 @@
     </script>
 </body>
 <style>
-    .fun-quote .box {
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
-        border-radius: 10px;
-        border: 0.5px solid lightblue;
-        justify-content: center;
-        align-items: center;
+    .footer {
+        position: relative;
+        background-color: #29333b;
+        height: 50vh;
+        width: 100vw;
+        z-index: -10;
     }
 
-    .fun-quote .box p {
-        text-align: center;
+    .footer .image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -5;
     }
 </style>
 
