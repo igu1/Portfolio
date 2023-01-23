@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.head {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/background_pattern.svg');
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10%;
+}
+
+.head .content-name {
+    width: 80%;
+    justify-content: start;
+    text-align: left;
+}
+
+.head .my-name {
+    font-size: 5rem;
+    animation: scale-up 0.5s forwards;
+    font-family: 'Pacifico', cursive;
+    color: rgb(43, 42, 42);
+}
+
+.head .content-name p {
+    animation: fade-in 1s forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.normal-btn {
+    padding: 10px 25px;
+    background-color: #f8753d;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    transition: 0.3s;
+    border: 1px solid #f8753d;
+}
+
+.normal-btn:hover {
+    background-color: transparent;
+    border: 1px solid #f8753d;
+    color: #000;
+}
+
+.head .color {
+    background-color: #7B2869;
+    border-radius: 20px;
+}
+
+.head .hire-me{
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    animation-delay: 1.5s;
+}
+
+/* About */
+.about {
+    display: flex;
+    padding: 50px;
+    width: 100%;
+    /* height: 100vh; */
+    align-items: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+.about .content-left {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .content-left,
+.about .content-right {
+    text-align: center;
+}
+
+.about .content-right img {
+    height: 500px;
+    border-radius: 20px;
+    background-size: cover;
+    transition: 0.3s;
+    margin-top: 50px;
+}
+
+.about .content-right h1,
+.about .content-right p {
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.about .content-right:hover img {
+    filter: brightness(.5);
+    transform: scale(1.1);
+}
+
+.about .content-right:hover h1,
+.about .content-right:hover p {
+    transform: scale(1) translateY(-100px);
+    color: white;
+}
+
+/* skills */
+.skills {
+    width: 50vw;
+    height: 100vh;
+}
+
+.bar-par {
+    padding: 10px;
+}
+
+.skills .bar {
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+.bar-par .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.skills .box {
+    height: 125px;
+    width: 40%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 19px 19px 38px #d9d9d9,
+        -19px -19px 38px #ffffff;
+    transition: 0.3s;
+}
+
+.skills .box:hover img {
+    animation: scale-and-rotate 1s forwards;
+}
+
+.skills img {
+    width: 64px;
+    height: 64px;
+}
+
+/* projects */
+.projects .all img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.projects .all img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.5);
+}
+
+.projects .all .data {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes scale-and-rotate {
+    50% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: rotateZ(90deg);
+    }
+
+    90% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
